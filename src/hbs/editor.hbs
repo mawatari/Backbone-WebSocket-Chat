@@ -1,0 +1,14 @@
+<h1>WebSocket Chat</h1>
+{{#if error}}
+<div id="chat-area" class="alert alert-error">
+	<button type="button" class="close" data-dismiss="alert">×</button>
+	<i class="icon-warning-sign"></i>サーバに接続できませんでした。
+</div>
+{{else}}
+<div id="chat-area">
+	<div class="input-prepend">
+		<span class="add-on" id="user-name"><i class="icon-user"></i>{{name}}</span>
+		<input type="text" id="new-message" placeholder="今なにしてる？">
+	</div>
+</div>
+{{/if}}

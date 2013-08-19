@@ -10,8 +10,8 @@ module.exports = function (grunt) {
                 'src/js/models/*.js',
                 'src/js/collections/*.js',
                 'src/js/views/*.js',
-                'src/js/app.js',
-                'src/js/namespace.js'
+                'src/js/namespace.js',
+                'src/js/app.js'
             ]
         },
 
@@ -34,8 +34,8 @@ module.exports = function (grunt) {
             compile: {
                 options: {
                     namespace: 'MyApp.Templates',
-                    processName: function (filename) {
-                        var pieces = filename.split('/');
+                    processName: function (filePath) {
+                        var pieces = filePath.split('/');
                         return pieces[pieces.length - 1].replace(/.hbs$/, '');
                     }
                 },

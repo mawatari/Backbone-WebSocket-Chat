@@ -1,0 +1,16 @@
+{{#if comment}}
+	<li class="well well-small">
+		<div><i class="icon-user"></i>{{user}}
+			<small class="meta chat-time">{{time}}</small>
+		</div>
+		<div>{{body}}</div>
+	</li>
+{{else}}
+	<li class="alert{{#if connect}} alert-info{{/if}}" id="{{id}}">
+		<button type="button" class="close" data-dismiss="alert">×</button>
+		<div>
+			<i class="icon-user"></i>{{body}}
+			<small class="meta chat-time">{{time}}</small>
+		</div>
+	</li>
+{{/if}}
